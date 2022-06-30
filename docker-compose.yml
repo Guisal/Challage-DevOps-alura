@@ -1,0 +1,31 @@
+version: "3.9"
+services:
+  db:
+    container_name: db
+    image: postgres
+    restart: always
+    user: postgres
+    volumes:
+    - C:\Users\guilherme.salvador\VolumeDocker\postgresql:/var/lib/postgresql/data
+    environment:
+      - LC_ALL=C.UTF-8
+      - POSTGRES_PASSWORD=mypassword
+      - POSTGRES_DB=mydatabase
+      - POSTGRES_USER=mydatabaseuser
+    networks:
+      - alura_net
+
+  web:
+    container_name: app_alura
+    image: app:4.0
+    restart: unless-stopped
+    ports:
+      - 8000:8000
+    networks:
+      - alura_net
+    depends_on:
+      - db
+
+networks:
+  alura_net:
+    driver: bridge
