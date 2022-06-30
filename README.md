@@ -1,6 +1,6 @@
-Todo o ambiente e teste foram realizados com Windows
-Criado container a partir de ubuntu aprendizado do python;
-Criado container com todos os requisitos para depois somente utilizar e atualizar os app;
+- Todo o ambiente e teste foram realizados com Windows
+- Criado container a partir de ubuntu aprendizado do python;
+- Criado container com todos os requisitos para depois somente utilizar e atualizar os app;
 
 cd .\Challage-DevOps-alura\Prepare-container\
 docker build -t preparedocker:1.1 .
