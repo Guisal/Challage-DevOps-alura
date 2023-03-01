@@ -12,7 +12,7 @@ docker build -t preparedocker:1.1 .
 cd .\Challage-DevOps-alura\
 docker build --build-arg var_email=admin@admin.com --build-arg var_user=admin --build-arg var_pass=admin -t app:4.0 .
 ```
-# Inicializar os container
+# Inicializar os containers
 inicializar o banco de dados primeiro:
 ```powershell
 cd ~
@@ -21,7 +21,7 @@ docker run --name db --hostname db -v $home\VolumeDocker\postgresql:/var/lib/pos
 docker container run -it -p 8000:8000 --network teste1 app:4.0
 ```
 
-# Após criar os container inicializar com o 
+# Após criar os containers inicializar com o 
 ```powershell
 docker-compose up
 ```
